@@ -48,6 +48,33 @@ function App() {
                   name="totalApplicableAssets"
                   label="Total Applicable Assets"
                   description="The total value of the assets that are subject to inheritance tax."
+                  tooltip={
+                    <div className="text-muted-foreground leading-normal space-y-2">
+                      <p>
+                        This is the total value of the estate for Japanese
+                        inheritance-tax purposes. When the deceased is a
+                        foreigner living outside Japan, this will be the value
+                        of:
+                      </p>
+                      <ul className="list-disc list-outside ml-4" role="list">
+                        <li>
+                          all assets inherited by the Japan-resident heir
+                          (assuming they are an "unlimited taxpayer" for
+                          Japanese inheritance tax purposes)
+                        </li>
+                        <li>all assets located in Japan</li>
+                        <li>
+                          all assets which were previously subjected to Japan's
+                          "early inheritance" system
+                        </li>
+                      </ul>
+                      <p>
+                        Note that this does not include all assets of the
+                        estate, only the ones subject to Japanese inheritance
+                        tax.
+                      </p>
+                    </div>
+                  }
                 />
                 <NumberFormField
                   control={form.control}
