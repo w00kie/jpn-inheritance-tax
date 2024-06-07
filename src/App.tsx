@@ -33,8 +33,8 @@ function App() {
         <header style={{ position: "fixed", top: 5, right: 5 }}>
           <ModeToggle />
         </header>
-        <section className="flex flex-col lg:flex-row items-center justify-center gap-6 px-6 py-16">
-          <div className="lg:w-2/3 lg:max-w-lg space-y-6">
+        <section className="flex flex-col md:flex-row items-center justify-center gap-6 px-6 py-6">
+          <div className="flex-1 md:w-2/3 md:max-w-lg space-y-6">
             <TypographyH1>Inheritance Tax Calculator</TypographyH1>
             <TypographyLead>
               This is a simple Japanese inheritance tax calculator. It is meant
@@ -97,8 +97,30 @@ function App() {
               </form>
             </Form>
           </div>
-          <div className="lg:w-1/3 lg:max-w-md space-y-6">
+          <div className="flex-1 w-full sm:w-2/3 md:w-1/3 md:max-w-md space-y-6">
             <CalculationCard form={form} />
+          </div>
+        </section>
+        <section className="flex flex-col items-center justify-center px-6 py-6 text-center text-gray-500 dark:text-gray-400 pb-16">
+          <div className="md:max-w-xl">
+            <p>
+              Calculations are based on the guide written by many good
+              volunteers of the{" "}
+              <a
+                href="https://www.reddit.com/r/JapanFinance"
+                className="text-blue-600 dark:text-blue-500 underline hover:no-underline"
+              >
+                /r/JapanFinance
+              </a>{" "}
+              community gathered in the{" "}
+              <a
+                href="https://japanfinance.github.io/tax/inheritance/"
+                className="text-blue-600 dark:text-blue-500 underline hover:no-underline"
+              >
+                /r/JapanFinance wiki
+              </a>
+              . Please refer to theses resources for more complex cases.
+            </p>
           </div>
         </section>
         <footer className="absolute block inset-x-0 bottom-0 pb-4 text-center text-muted-foreground">
