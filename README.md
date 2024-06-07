@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+# Simple Japanese Inheritance Tax Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Why?
 
-Currently, two official plugins are available:
+I needed a small project to work on my currently non-existent frontend skills and this seemed like something I could hash out in about a day with satisfying results. Also it's cool if it can be of use to someone.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Usage and Caveats
 
-## Expanding the ESLint configuration
+The app is published on Github Pages [here](https://w00kie.github.io/jpn-inheritance-tax/). As stated there, this only covers the case of a foreigner in Japan receiving an inheritance from abroad where no assets are located in Japan and all other heirs are foreigners outside of Japan. This seems to be the typical case for questions coming to [/r/JapanFinance](https://www.reddit.com/r/JapanFinance) and is also much simpler to implement.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This also assumes a standard case for the list of heirs where a parent has died and leaves their estate to children and/or a surviving spouse. So the statutory distribution is a basic equal split between all heirs with the exception of the spouse getting a minimum of 50%. More complex cases with grand-children of an already deceased child or siblings and nieces/nephews, etc. are out of scope.
 
-- Configure the top-level `parserOptions` property like this:
+## Feedback and Contributions
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+I will be happy to receive any and all feedback about both the UX/UI and the inner workings of the calculations. My code is fairly ugly right now so please forgive the mess. Feel free to open issues here or offer fixes through PRs.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Cheers,
+
+François
