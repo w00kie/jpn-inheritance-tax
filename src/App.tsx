@@ -33,7 +33,7 @@ function App() {
         <header style={{ position: "fixed", top: 5, right: 5 }}>
           <ModeToggle />
         </header>
-        <section className="flex flex-col md:flex-row items-center justify-center gap-6 px-6 py-6">
+        <section className="flex flex-col md:flex-row items-center justify-center gap-6 px-6 pt-12 pb-6">
           <div className="flex-1 md:w-2/3 md:max-w-lg space-y-6">
             <TypographyH1>Inheritance Tax Calculator</TypographyH1>
             <TypographyLead>
