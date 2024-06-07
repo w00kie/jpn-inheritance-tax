@@ -94,6 +94,8 @@ export function CalculationCard({
       (form.watch("isStatutoryHeir") ? 1 : 1.2);
   }
 
+  let effectiveTaxRate = totalTaxOwed / totalApplicableAssets;
+
   return (
     <Card className={cn("w-full", className)} {...props}>
       <CardHeader>
@@ -129,11 +131,14 @@ export function CalculationCard({
           ))}
         </ul>
       </CardContent>
-      <CardFooter>
-        <div>
+      <CardFooter className="grid">
+        <p>
           <span className="font-bold">Total Tax Owed:</span>{" "}
           {totalTaxOwed.toLocaleString()}¥
-        </div>
+        </p>
+        <p className="text-muted-foreground">
+          Effective Tax Rate: {(effectiveTaxRate * 100).toPrecision(3)}%
+        </p>
       </CardFooter>
     </Card>
   );
