@@ -94,7 +94,7 @@ export function CalculationCard({
       (form.watch("isStatutoryHeir") ? 1 : 1.2);
   }
 
-  let effectiveTaxRate = totalTaxOwed / totalApplicableAssets;
+  let effectiveTaxRate = totalTaxOwed / totalApplicableAssets || 0;
 
   return (
     <Card className={cn("w-full", className)} {...props}>
