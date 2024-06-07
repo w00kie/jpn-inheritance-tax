@@ -112,7 +112,7 @@ export function CalculationCard({
           {deduction.toLocaleString()}¥
         </div>
         <div>
-          <span className="font-bold">Estate after deduction:</span>{" "}
+          <span className="font-bold">Applicable assets after deduction:</span>{" "}
           {estateAfterDeduction.toLocaleString()}¥
         </div>
         <ul className="space-y-4">
