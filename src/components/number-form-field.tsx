@@ -7,10 +7,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { CircleHelp } from "lucide-react";
 import { FieldValues } from "react-hook-form";
 import { Input } from "@/components/ui/input";
@@ -35,14 +35,18 @@ export function NumberFormField(props: CustomFormFieldProps) {
             <div className="flex items-center gap-2">
               {props.label}
               {props.tooltip && (
-                <HoverCard>
-                  <HoverCardTrigger asChild>
-                    <CircleHelp className="inline" size={16} />
-                  </HoverCardTrigger>
-                  <HoverCardContent className="w-96">
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <CircleHelp
+                      className="inline cursor-pointer"
+                      role="button"
+                      size={16}
+                    />
+                  </PopoverTrigger>
+                  <PopoverContent className="w-96">
                     {props.tooltip}
-                  </HoverCardContent>
-                </HoverCard>
+                  </PopoverContent>
+                </Popover>
               )}
             </div>
           </FormLabel>
