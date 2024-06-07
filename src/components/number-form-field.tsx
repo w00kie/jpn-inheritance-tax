@@ -11,6 +11,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { Button } from "@/components/ui/button";
 import { CircleHelp } from "lucide-react";
 import { FieldValues } from "react-hook-form";
 import { Input } from "@/components/ui/input";
@@ -37,11 +38,9 @@ export function NumberFormField(props: CustomFormFieldProps) {
               {props.tooltip && (
                 <Popover>
                   <PopoverTrigger asChild>
-                    <CircleHelp
-                      className="inline cursor-pointer"
-                      role="button"
-                      size={16}
-                    />
+                    <Button variant="link" size="sm" className="px-0">
+                      <CircleHelp className="inline" size={16} />
+                    </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-96">
                     {props.tooltip}
