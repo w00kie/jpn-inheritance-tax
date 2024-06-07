@@ -46,7 +46,7 @@ function App() {
                 <NumberFormField
                   control={form.control}
                   name="totalApplicableAssets"
-                  label="Total Applicable Assets"
+                  label="Your Share of the Estate"
                   description="The total value of the assets that are subject to inheritance tax."
                   tooltip={
                     <div className="text-muted-foreground leading-normal space-y-2">
