@@ -102,24 +102,24 @@ function App() {
           </div>
         </section>
         <section className="flex flex-col items-center justify-center px-6 py-6 text-center text-gray-500 dark:text-gray-400 pb-16">
-          <div className="md:max-w-xl">
+          <div className="md:w-3/4">
             <p>
-              Calculations are based on the guide written by many good
-              volunteers of the{" "}
+              Calculations are based on{" "}
+              <a
+                href="https://japanfinance.github.io/tax/inheritance/"
+                className="text-blue-600 dark:text-blue-500 underline hover:no-underline"
+              >
+                the guide
+              </a>{" "}
+              written by many good volunteers of the{" "}
               <a
                 href="https://www.reddit.com/r/JapanFinance"
                 className="text-blue-600 dark:text-blue-500 underline hover:no-underline"
               >
                 /r/JapanFinance
               </a>{" "}
-              community gathered in the{" "}
-              <a
-                href="https://japanfinance.github.io/tax/inheritance/"
-                className="text-blue-600 dark:text-blue-500 underline hover:no-underline"
-              >
-                /r/JapanFinance wiki
-              </a>
-              . Please refer to theses resources for more complex cases.
+              community. Please refer to theses resources for more complex
+              cases.
             </p>
           </div>
         </section>
