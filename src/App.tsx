@@ -8,6 +8,7 @@ import { TypographyH1, TypographyLead } from "@/components/typography";
 import { NumberFormField } from "@/components/number-form-field";
 import { CheckboxFormField } from "@/components/checkbox-form-field";
 import { CalculationCard } from "@/components/calculation-card";
+import { DetailsCard } from "@/components/details";
 
 export const formSchema = z.object({
   totalApplicableAssets: z.number().min(0).default(0),
@@ -97,31 +98,12 @@ function App() {
               </form>
             </Form>
           </div>
-          <div className="flex-1 w-full sm:w-2/3 md:w-1/3 md:max-w-md space-y-6">
+          <div className="flex-1 w-full md:max-w-md space-y-6">
             <CalculationCard form={form} />
           </div>
         </section>
-        <section className="flex flex-col items-center justify-center px-6 py-6 text-center text-gray-500 dark:text-gray-400 pb-16">
-          <div className="md:w-3/4">
-            <p>
-              Calculations are based on{" "}
-              <a
-                href="https://japanfinance.github.io/tax/inheritance/"
-                className="text-blue-600 dark:text-blue-500 underline hover:no-underline"
-              >
-                the guide
-              </a>{" "}
-              written by many good volunteers of the{" "}
-              <a
-                href="https://www.reddit.com/r/JapanFinance"
-                className="text-blue-600 dark:text-blue-500 underline hover:no-underline"
-              >
-                /r/JapanFinance
-              </a>{" "}
-              community. Please refer to theses resources for more complex
-              cases.
-            </p>
-          </div>
+        <section className="flex flex-col items-center justify-center px-6 py-6 text-gray-500 dark:text-gray-400 pb-16">
+          <DetailsCard />
         </section>
         <footer className="absolute block inset-x-0 bottom-0 pb-4 text-center text-muted-foreground">
           <p>
