@@ -123,7 +123,7 @@ export function CalculationCard({
                 {(heir.ratio * 100).toPrecision(3)}% share
               </div>
               <div className="text-muted-foreground">
-                {heir.statutoryDistribution.toLocaleString()} *{" "}
+                {heir.statutoryDistribution.toLocaleString()} ×{" "}
                 {(heir.tax.rate * 100).toFixed(0)}% -{" "}
                 {heir.tax.deduction.toLocaleString()} ={" "}
                 {heir.tax.owed.toLocaleString()}¥
