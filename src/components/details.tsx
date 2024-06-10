@@ -58,10 +58,10 @@ export const DetailsCard = () => {
               The cost basis of these assets are transferred to the heirs as-is.
               So if any of the assets are sold after death, even if the sale
               happens before assets have been properly distributed, any capital
-              gains generated will be born by the heirs.
+              gains generated will be borne by the heirs.
             </p>
             <p>
-              This cost basis can be difficult to estimate for real estat
+              This cost basis can be difficult to estimate for real estate
               properties purchased abroad many decades ago. The currency
               exchange rate at the time of purchase must also be accounted for.
               If the original cost cannot be determined, 5% of the sale price
