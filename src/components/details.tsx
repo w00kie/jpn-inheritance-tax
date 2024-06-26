@@ -8,7 +8,7 @@ import { TypographyH3 } from "./typography";
 
 export const DetailsCard = () => {
   return (
-    <div className="w-full md:max-w-4xl space-y-6">
+    <div className="w-full space-y-6">
       <TypographyH3>Additional Details</TypographyH3>
       <Accordion type="multiple">
         <AccordionItem value="statutory-heirs">
@@ -38,7 +38,7 @@ export const DetailsCard = () => {
                 className="text-blue-600 dark:text-blue-500 underline hover:no-underline"
               >
                 this Japanese webpage
-              </a>
+              </a>{" "}
               that lists 52 different patterns of statutory heirs and their
               standard distribution of assets.
             </p>

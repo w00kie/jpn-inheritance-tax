@@ -1,4 +1,3 @@
-import { cn } from "@/utils";
 import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 import { formSchema } from "@/App";
@@ -10,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { applyTaxRate, TaxInfo, floorToZero } from "@/utils";
+import { applyTaxRate, TaxInfo, floorToZero, cn } from "@/utils";
 
 interface CalculationCardProps extends React.ComponentProps<typeof Card> {
   form: UseFormReturn<z.infer<typeof formSchema>>;
@@ -72,7 +71,7 @@ export function CalculationCard({
   className,
   form,
   ...props
-}: CalculationCardProps) {
+}: Readonly<CalculationCardProps>) {
   let totalApplicableAssets = form.watch("totalApplicableAssets") * 1;
   let deduction = form.watch("numberOfStatutoryHeirs") * 6_000_000 + 30_000_000;
   let estateAfterDeduction = floorToZero(totalApplicableAssets - deduction);

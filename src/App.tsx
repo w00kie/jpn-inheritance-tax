@@ -30,13 +30,15 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <main className="relative min-h-screen w-full">
-        <header style={{ position: "fixed", top: 5, right: 5 }}>
-          <ModeToggle />
-        </header>
-        <section className="flex flex-col md:flex-row items-center justify-center gap-6 px-6 pt-12 pb-6">
-          <div className="flex-1 md:w-2/3 md:max-w-lg space-y-6">
+      <header className="fixed top-2 right-2">
+        <ModeToggle />
+      </header>
+      <main className="xl:w-5/6 lg:max-w-5xl md:mx-auto p-4 pt-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+          <section id="title" className="md:col-span-5 p-4">
             <TypographyH1>Inheritance Tax Calculator</TypographyH1>
+          </section>
+          <section id="inputs" className="md:col-span-3 p-4 flex flex-col">
             <TypographyLead>
               This is a simple Japanese inheritance tax calculator. It is meant
               to cover the case of a foreigner in Japan receiving an inheritance
@@ -57,7 +59,7 @@ function App() {
                         foreigner living outside Japan, this will be the value
                         of:
                       </p>
-                      <ul className="list-disc list-outside ml-4" role="list">
+                      <ul className="list-disc list-outside ml-4">
                         <li>
                           all assets inherited by the Japan-resident heir
                           (assuming they are an "unlimited taxpayer" for
@@ -97,21 +99,24 @@ function App() {
                 />
               </form>
             </Form>
-          </div>
-          <div className="flex-1 w-full md:max-w-md space-y-6">
+          </section>
+          <section id="calculation" className="md:col-span-2 p-4">
             <CalculationCard form={form} />
-          </div>
-        </section>
-        <section className="flex flex-col items-center justify-center px-6 py-6 text-gray-500 dark:text-gray-400 pb-16">
-          <DetailsCard />
-        </section>
-        <footer className="absolute block inset-x-0 bottom-0 pb-4 text-center text-muted-foreground">
-          <p>
-            Made with ❤️ by{" "}
-            <a href="https://github.com/w00kie">François Rejeté</a> in 🇯🇵
-          </p>
-        </footer>
+          </section>
+          <section
+            id="additional-details"
+            className="md:col-span-5 p-4 text-gray-500 dark:text-gray-400 pb-16"
+          >
+            <DetailsCard />
+          </section>
+        </div>
       </main>
+      <footer className="sticky top-[100vh] pb-4 text-center text-muted-foreground">
+        <p>
+          Made with ❤️ by{" "}
+          <a href="https://github.com/w00kie">François Rejeté</a> in 🇯🇵
+        </p>
+      </footer>
     </ThemeProvider>
   );
 }
